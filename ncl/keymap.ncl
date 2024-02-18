@@ -17,12 +17,12 @@ let tapme = {
   
     A = kc.A & mod.lctl & hold.reg.behavior {timeout_ms = 150},
     R = kc.R & mod.lsft & hold.reg.behavior {timeout_ms = 150},
-    S = kc.S & mod.lalt & hold.reg.behavior {timeout_ms = 150},
+    S = kc.S & mod.lalt & hold.reg.behavior {timeout_ms = 300},
     T = kc.T & mod.lsft & hold.reg.behavior {timeout_ms = 150},
     C = kc.C & mod.lgui & hold.reg.behavior {timeout_ms = 150},
 
     N = kc.N & mod.lsft & hold.reg.behavior {timeout_ms = 150},
-    E = kc.E & mod.lalt & hold.reg.behavior {timeout_ms = 150},
+    E = kc.E & mod.lalt & hold.reg.behavior {timeout_ms = 300},
     I = kc.I & mod.rsft & hold.reg.behavior {timeout_ms = 150},
     O = kc.O & mod.rctl & hold.reg.behavior {timeout_ms = 150},
     Z = kc.Z & mod.ralt & hold.reg.behavior {timeout_ms = 150},
@@ -54,7 +54,7 @@ let tapme = {
     [
             tapme.W, kc.F, kc.P,                           kc.L, kc.U, kc.Y,
       tapme.A, tapme.R, tapme.S, tapme.T, kc.G,           kc.M,  tapme.N, tapme.E, tapme.I,tapme.O, 
-      kc.SLSH, kc.X, tapme.C, kc.D, kc.V,   kc.K,  kc.H, tapme.COMM, kc.Z, kc.DOT,
+      kc.SLSH, kc.X, tapme.C, kc.D, kc.V,   kc.K,  kc.H, tapme.COMM, tapme.Z, kc.DOT,
                            tapme.TLL, tapme.TLR,    tapme.TRL, tapme.TRR,
       #virtuals
       kc.Q, kc.B, kc.J, kc.QUOT, mod.lgui, kc.ENT, kc.SLSH, kc.Z, kc.DOT, kc.SCLN,
