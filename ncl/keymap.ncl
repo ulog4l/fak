@@ -64,8 +64,8 @@ let tapme = {
     ],
     [
       kc.ESC, kc.EQL, X, kc.N2, kc.N3, kc.N4,
-      kc.QUOT & hold.trans, ks.TILD & hold.trans, kc.MINS & hold.trans, kc.SLSH & hold.trans, kc.BSLS, kc.N6, kc.N7 & hold.trans, kc.N8 & hold.trans, kc.N9 & hold.trans, kc.N5 & hold.trans,
-      X, ks.LPRN, ks.RPRN & hold.trans, kc.LBRC, kc.RBRC, kc.N1, kc.N0, kc.DOT & hold.trans, kc.SCLN, X,
+      kc.QUOT & hold.trans, ks.TILD & hold.trans, kc.MINS & hold.trans, kc.SLSH & hold.trans, kc.BSLS, kc.N6, kc.N7 & hold.trans, kc.N8 & hold.trans, kc.N9 & hold.trans, kc.DOT & hold.trans,
+      X, ks.LPRN, ks.RPRN & hold.trans, kc.LBRC, kc.RBRC, kc.N5, kc.N1, kc.N0 & hold.trans, kc.SCLN, X,
       X, X, X, X,
       # Combo [12, 13]
       X, X, X, X, me.MUTE, X, X, X, X, X,
