@@ -26,7 +26,7 @@ let tapme = {
     I = kc.I & mod.rsft & hold.reg.behavior {timeout_ms = 150},
     O = kc.O & mod.rctl & hold.reg.behavior {timeout_ms = 150},
     Z = kc.Z & mod.ralt & hold.reg.behavior {timeout_ms = 150},
-    COMM = kc.DOT & mod.lgui & hold.reg.behavior {timeout_ms = 150},
+    COMM = kc.COMM & mod.lgui & hold.reg.behavior {timeout_ms = 150},
 
     
     TLL = MO 2,
