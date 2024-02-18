@@ -7,6 +7,7 @@ let ks = tap.reg.ks in
 let MO = hold.reg.layer in
 let tm = tap.reg.mod in
 let mod = hold.reg.mod in
+let me = tap.custom.media in
 let X = tap.trans & hold.trans in
 
 let tapme = {
@@ -36,7 +37,7 @@ let tapme = {
 {
   virtual_keys = [
     combo.make 50 [0, 1],   #q
-    combo.make 50 [1, 2]  #b
+    combo.make 50 [1, 2],  #b
     combo.make 50 [3, 4],  #j
     combo.make 50 [4, 5], #quot
     combo.make 50 [11, 12], #WIN
@@ -52,11 +53,11 @@ let tapme = {
   layers = [
     [
             tapme.W, kc.F, kc.P,                           kc.L, kc.U, kc.Y,
-      tapme.A, tapme.R, tapme.S, tagt.T, kc.G,           kc.M,  tapme.N, tapme.E, tapme.I,tapme.O, 
+      tapme.A, tapme.R, tapme.S, tapme.T, kc.G,           kc.M,  tapme.N, tapme.E, tapme.I,tapme.O, 
       kc.SLSH, kc.X, tapme.C, kc.D, kc.V,   kc.K,  kc.H, tapme.COMM, kc.Z, kc.DOT,
                            tapme.TLL, tapme.TLR,    tapme.TRL, tapme.TRR,
       #virtuals
-      kc.Q, kc.B, kc.J, kc.QUOT, mod.lgui, kc.ENT, kc.SLSH, kc.Z, kc.DOT, kc.SCLN
+      kc.Q, kc.B, kc.J, kc.QUOT, mod.lgui, kc.ENT, kc.SLSH, kc.Z, kc.DOT, kc.SCLN,
       #bootme
       tap.custom.fak.BOOT,
       
@@ -67,19 +68,20 @@ let tapme = {
       X, ks.LPRN, ks.RPRN & hold.trans, kc.LBRC, kc.RBRC, kc.N1, kc.N0, kc.DOT & hold.trans, kc.SCLN, X,
       X, X, X, X,
       # Combo [12, 13]
-      X, X, kc.N1, kc.N5,  tap.custom.media.MUTE, X, X,
+      X, X, X, X, me.MUTE, X, X, X, X, X,
+      X, 
     ],
     [
       kc.ESC, kc.UP, X, kp.KP_2, kp.KP_3, kp.KP_4,
       kc.TAB, kc.LEFT, kc.DOWN, kc.RIGHT, X, kp.KP_6, kp.KP_7 & hold.trans, kp.KP_8 & hold.trans, kp.KP_9 & hold.trans, kp.KP_5 & hold.trans, #KP_ is right syntax
-      X,X,X,kc.DEL ,kc.INS,kp.KP_1,kp.KP_0,kp.KP_COMM,X,X,
+      X,X,X,kc.DEL ,kc.INS,kp.KP_1,kp.KP_0,kp.KP_COMMA,X,X,
       X,X,X,X,
       #virt
       X, X, X, X, me.MUTE, X, X, X, X, X,
       X, 
     ],
     [
-      X, kc.UP, X, kp.F2, kp.F3, kp.F4,
+      X, X, X, kp.F2, kp.F3, kp.F4,
       X, X, X, X, X, kp.F6, kp.F7, kp.F8, kp.F9, kp.F5,
       X,X,X,X,X,kc.F1,kc.F10,kc.F11,kc.F12,X,
       X,X,X,X,
