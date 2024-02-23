@@ -4,7 +4,7 @@ let { CH552T, .. } = import "./fak/mcus.ncl" in
 {
   mcu = CH552T,
   matrix = {
-    cols = [13, 35, 34, 31, 17, 16, 15, 10],
+    cols = [13, 35, 34, 31, 10, 15, 16, 17],
     rows = [33, 32, 11, 12],
   },
   usb_dev = {
