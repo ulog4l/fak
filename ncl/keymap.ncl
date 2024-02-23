@@ -15,24 +15,28 @@ let tapme = {
 
     W = kc.W & MO 3 & hold.reg.behavior {timeout_ms = 300},
   
-    A = kc.A & mod.lctl & hold.reg.behavior {timeout_ms = 150},
-    R = kc.R & mod.lsft & hold.reg.behavior {timeout_ms = 150},
+    A = kc.A & mod.lsft & hold.reg.behavior {timeout_ms = 250},
+    R = kc.R & mod.lsft & hold.reg.behavior {timeout_ms = 200},
+
     S = kc.S & mod.lalt & hold.reg.behavior {timeout_ms = 300},
     T = kc.T & mod.lsft & hold.reg.behavior {timeout_ms = 150},
+    
     C = kc.C & mod.lgui & hold.reg.behavior {timeout_ms = 150},
 
     N = kc.N & mod.lsft & hold.reg.behavior {timeout_ms = 150},
     E = kc.E & mod.lalt & hold.reg.behavior {timeout_ms = 300},
     I = kc.I & mod.rsft & hold.reg.behavior {timeout_ms = 150},
-    O = kc.O & mod.rctl & hold.reg.behavior {timeout_ms = 150},
-    Z = kc.Z & mod.ralt & hold.reg.behavior {timeout_ms = 150},
+    O = kc.O,
+
+    Z = kc.Z & mod.lctl & hold.reg.behavior {timeout_ms = 150},
+    X = kc.X & mod.lctl & hold.reg.behavior {timeout_ms = 150},
     COMM = kc.COMM & mod.lgui & hold.reg.behavior {timeout_ms = 150},
 
     
     TLL = MO 2,
     TLR = kc.SPC & MO 1 & hold.reg.behavior {timeout_ms = 200},
     TRL = kc.ENT & MO 2 & hold.reg.behavior {timeout_ms = 120}, 
-    TRR = kc.BSPC,
+    TRR = kc.BSPC & mod.ralt & hold.reg.behavior {timeout_ms = 200}
 } in
 {
   virtual_keys = [
