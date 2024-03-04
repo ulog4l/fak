@@ -10,30 +10,36 @@ let mod = hold.reg.mod in
 let me = tap.custom.media in
 let X = tap.trans & hold.trans in
 
+
 let tapme = {
     Q = td.make 200[kc.Q & MO 4 & hold.reg.behavior {timeout_ms = 150}, kc.ESC & hold.trans],
 
     W = kc.W & MO 3 & hold.reg.behavior {timeout_ms = 300},
   
-    A = kc.A & mod.lctl & hold.reg.behavior {timeout_ms = 150},
-    R = kc.R & mod.lsft & hold.reg.behavior {timeout_ms = 150},
+    A = kc.A & mod.lsft & hold.reg.behavior {timeout_ms = 250},
+    R = kc.R & mod.lsft & hold.reg.behavior {timeout_ms = 200},
+
     S = kc.S & mod.lalt & hold.reg.behavior {timeout_ms = 300},
     T = kc.T & mod.lsft & hold.reg.behavior {timeout_ms = 150},
+    
     C = kc.C & mod.lgui & hold.reg.behavior {timeout_ms = 150},
 
     N = kc.N & mod.lsft & hold.reg.behavior {timeout_ms = 150},
     E = kc.E & mod.lalt & hold.reg.behavior {timeout_ms = 300},
     I = kc.I & mod.rsft & hold.reg.behavior {timeout_ms = 150},
-    O = kc.O & mod.rctl & hold.reg.behavior {timeout_ms = 150},
-    Z = kc.Z & mod.ralt & hold.reg.behavior {timeout_ms = 150},
+    O = kc.O,
+
+    Z = kc.Z & mod.lctl & hold.reg.behavior {timeout_ms = 150},
+    X = kc.X & mod.lctl & hold.reg.behavior {timeout_ms = 150},
     COMM = kc.COMM & mod.lgui & hold.reg.behavior {timeout_ms = 150},
 
     
     TLL = MO 2,
     TLR = kc.SPC & MO 1 & hold.reg.behavior {timeout_ms = 200},
     TRL = kc.ENT & MO 2 & hold.reg.behavior {timeout_ms = 120}, 
-    TRR = kc.BSPC,
+    TRR = kc.BSPC & mod.ralt & hold.reg.behavior {timeout_ms = 200}
 } in
+
 {
   virtual_keys = [
     combo.make 50 [0, 1],   #q
@@ -54,7 +60,7 @@ let tapme = {
     [
             tapme.W, kc.F, kc.P,                           kc.L, kc.U, kc.Y,
       tapme.A, tapme.R, tapme.S, tapme.T, kc.G,           kc.M,  tapme.N, tapme.E, tapme.I,tapme.O, 
-      kc.SLSH, kc.X, tapme.C, kc.D, kc.V,   kc.K,  kc.H, tapme.COMM, tapme.Z, kc.DOT,
+      mod.lsft, tapme.X, tapme.C, kc.D, kc.V,   kc.K,  kc.H, tapme.COMM, tapme.Z, kc.DOT,
                            tapme.TLL, tapme.TLR,    tapme.TRL, tapme.TRR,
       #virtuals
       kc.Q, kc.B, kc.J, kc.QUOT, mod.lgui, kc.ENT, kc.SLSH, kc.Z, kc.DOT, kc.SCLN,
@@ -65,7 +71,7 @@ let tapme = {
     [
       kc.ESC, kc.EQL, X, kc.N2, kc.N3, kc.N4,
       kc.QUOT & hold.trans, ks.TILD & hold.trans, kc.MINS & hold.trans, kc.SLSH & hold.trans, kc.BSLS, kc.N6, kc.N7 & hold.trans, kc.N8 & hold.trans, kc.N9 & hold.trans, kc.DOT & hold.trans,
-      X, ks.LPRN, ks.RPRN & hold.trans, kc.LBRC, kc.RBRC, kc.N5, kc.N1, kc.N0 & hold.trans, kc.SCLN, X,
+      X, ks.LPRN & hold.trans, ks.RPRN & hold.trans, kc.LBRC, kc.RBRC, kc.N5, kc.N1, kc.N0 & hold.trans, kc.SCLN & hold.trans, X,
       X, X, X, X,
       # Combo [12, 13]
       X, X, X, X, me.MUTE, X, X, X, X, X,
